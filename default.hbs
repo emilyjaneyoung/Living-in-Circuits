@@ -58,6 +58,12 @@
 		{{ghost_foot}}
 
 		<!-- Scripts -->
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-2.0.0.min.js"></script>
+        <script>
+            if (typeof jQuery == 'undefined') {
+                document.write(unescape("%3Cscript src='/js/jquery-2.0.0.min.js' type='text/javascript'%3E%3C/script%3E"));
+            }
+        </script>
 		<script type="text/javascript" src="/js/base.min.js"></script>
 
 	</body>

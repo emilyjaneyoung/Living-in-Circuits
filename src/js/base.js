@@ -16,9 +16,6 @@ function animate() {
 
 animate();
 
-// Reading Time
-$(".content .post__content").readingTime();
-
 // Infinite Scroll Plugin
 $(function() {
     $("#infinite-scroll-wrap").infinitescroll({
@@ -40,3 +37,6 @@ $(function() {
         $(".next-page").remove();
     });
 });
+
+// Reading Time
+$(".content .post__content").readingTime();

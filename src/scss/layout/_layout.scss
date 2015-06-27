@@ -34,15 +34,15 @@
 
 .site-footer {
     @include rem(padding, 3rem 0);
+    a {
+        color: $color__secondary;
+        text-decoration: none;
+        @include state() {
+            color: $color__tertiary;
+        }
+    }
 }
 
     .site-footer__title {
         margin: 0;
-        a {
-            color: $color__secondary;
-            text-decoration: none;
-            @include state() {
-                color: $color__tertiary;
-            }
-        }
     }

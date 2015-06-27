@@ -1,0 +1,38 @@
+{{!< default}}
+
+{{#post}}
+
+<main role="main" id="main-content" class="coloured">
+
+    <div class="hero spacer">
+        <a href="/" title="Journal of Emily Young, Front-End Developer" class="hero__pos">
+            <span class="hero__text reverse">
+                {{@blog.title}}
+            </span>
+            <span class="hero__desc reverse">
+                {{@blog.description}}
+            </span>
+        </a>
+    </div>
+
+    <article class="wrapper coloured">
+
+        <div class="main-content spacer {{post_class}}">
+
+            <header class="central">
+                <h1 class="title-text">
+                    {{title}}
+                </h1>
+            </header>
+
+            <div class="post__content">
+                {{content}}
+            </div>
+
+        </div>
+
+    </article>
+
+</main>
+
+{{/post}}

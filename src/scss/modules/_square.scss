@@ -1,0 +1,66 @@
+// =========================================================================
+// Modules - Reusable Modular Parts
+// =========================================================================
+
+// =========================================================================
+// Squares
+// =========================================================================
+
+.square {
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
+    margin: 1% .5%;
+}
+
+.post-template .square {
+    @include breakpoint(tiny) {
+        flex-wrap: wrap;
+        display: flex;
+    }
+    @include breakpoint(small) {
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+}
+
+    .square__item {
+        position: relative;
+        border: 7px solid $color__primary;
+        overflow: hidden;
+        transition: color 0.3s;
+        @include state() {
+            border: 7px solid $color__secondary;
+            .title-text:after {
+                content: '';
+                width: 45%;
+            }
+        }
+        @include breakpoint(tiny) {
+            width: 98%;
+            margin: 1%;
+            @include rem(margin-top, 1rem);
+            @include rem(margin-bottom, 1rem);
+            @include rem(padding, 3rem);
+            @include rem(font-size, 1.8rem);
+        }
+        @include breakpoint(small) {
+            width: 48%;
+            @include rem(padding, 2rem);
+            @include rem(font-size, 1.6rem);
+        }
+        @include breakpoint(standard) {
+            width: 24%;
+            margin: .5%;
+            @include rem(margin-top, 1rem);
+            @include rem(margin-bottom, 1rem);
+            @include rem(font-size, 1.8rem);
+        }
+    }
+
+    .post-template .square__item {
+        @include breakpoint(tiny) {
+            width: auto;
+            width: 100%;
+        }
+    }

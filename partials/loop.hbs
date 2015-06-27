@@ -1,0 +1,31 @@
+<div id="infinite-scroll-wrap" class="spacer--small square" aria-label="articles by date, newest first">
+
+    {{#foreach posts}}
+
+        <article class="main-content content {{post_class}} square__item central">
+
+            <h1 class="central title-text">
+                <a href="{{url}}">
+                    {{title}}
+                </a>
+            </h1>
+
+            <h2 class="date">
+                Published on: {{date format='DD MMM YYYY'}}
+            </h2>
+
+            {{#if tags}}
+            <h3 class="tags">
+                {{tags prefix=" Filed in: "}}
+            </h3>
+            {{/if}}
+
+            <p class="post__content">
+                {{excerpt words="15"}}&hellip;
+            </p>
+
+        </article>
+
+    {{/foreach}}
+
+</div>

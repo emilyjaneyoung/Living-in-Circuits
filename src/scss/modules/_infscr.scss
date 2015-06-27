@@ -1,0 +1,45 @@
+// =========================================================================
+// Modules - Reusable Modular Parts
+// =========================================================================
+
+// =========================================================================
+// Infscr
+// =========================================================================
+
+.infscr-loading {
+    position: fixed;
+    @include rem(right, 2rem);
+    @include rem(bottom, 4rem);
+    @include rem(width, 30rem);
+    height: auto;
+    @include rem(padding, 1rem);
+    @include rem(font-size, 1.4rem);
+    background-color: $color__neutral--gray;
+    z-index: 100000;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: bounceInUp;
+    img {
+        position: absolute;
+    }
+}
+
+@keyframes bounceInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(2000px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+
+    80% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

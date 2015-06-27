@@ -1,0 +1,120 @@
+{{!< default}}
+
+{{#post}}
+
+<main role="main" id="main-content" class="coloured">
+
+    <div class="hero spacer">
+		<a href="/" title="Journal of Emily Young, Front-End Developer" class="hero__pos">
+			<span class="hero__text reverse">
+                {{@blog.title}}
+            </span>
+    		<span class="hero__desc reverse">
+    			{{@blog.description}}
+    		</span>
+        </a>
+	</div>
+
+	<article class="wrapper coloured">
+
+ 		<div class="main-content spacer {{post_class}}">
+
+            <header class="central">
+                <h1 class="title-text">
+                    {{title}}
+                </h1>
+
+                {{#if author}}
+                <h2 class="meta">
+                    by {{author.name}}
+                </h2>
+                {{/if}}
+
+                <h3 class="date">
+                    Published on: {{date format='DD MMM YYYY'}}
+                </h3>
+
+                {{#if tags}}
+                <h3 class="tags">
+                    {{tags prefix=" Filed in: "}}
+                </h3>
+                {{/if}}
+
+                <p class="reading-time">
+                    Read in <span class="eta"></span>
+                </p>
+            </header>
+
+			<div class="post__content">
+				{{content}}
+			</div>
+
+		</div>
+
+        <footer class="main-content">
+
+            <h4 class="visually-hidden">Continue Reading</h4>
+
+            <div class="square">
+
+                {{#prev_post}}
+                <section class="main-content content square__item central">
+
+                    <h1 class="central title-text">
+                        <a href="{{url}}">
+                            {{title}}
+                        </a>
+                    </h1>
+
+                    <h3 class="date">
+                        Published on: {{date format='DD MMM YYYY'}}
+                    </h3>
+
+                    {{#if tags}}
+                    <h3 class="tags">
+                        {{tags prefix=" Filed in: "}}
+                    </h3>
+                    {{/if}}
+
+                    <p class="post__content">
+                        {{excerpt words="15"}}&hellip;
+                    </p>
+
+                </section>
+                {{/prev_post}}
+
+                {{#next_post}}
+                <section class="main-content content square__item central">
+
+                    <h1 class="central title-text">
+                        <a href="{{url}}">
+                            {{title}}
+                        </a>
+                    </h1>
+
+                    <h3 class="date">
+                        Published on: {{date format='DD MMM YYYY'}}
+                    </h3>
+
+                    {{#if tags}}
+                    <h3 class="tags">
+                        {{tags prefix=" Filed in: "}}
+                    </h3>
+                    {{/if}}
+
+                    <p class="post__content">
+                        {{excerpt words="15"}}&hellip;
+                    </p>
+
+                </section>
+                {{/next_post}}
+
+            </div>
+
+        </footer>
+
+  	</article>
+
+</main>
+
+{{/post}}

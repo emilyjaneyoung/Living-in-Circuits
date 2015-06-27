@@ -1,0 +1,69 @@
+// =========================================================================
+// Mixins
+// =========================================================================
+
+// =========================================================================
+// Media Queries - @include breakpoint(standard) {}
+// =========================================================================
+
+@mixin breakpoint($point) {
+
+	@if $point == large {
+		@media (min-width: 1270px) { @content; }
+	}
+	@if $point == big {
+		@media (min-width: 1024px) { @content; }
+	}
+	@if $point == standard {
+		@media (min-width: 960px) { @content; }
+	}
+	@else if $point == small {
+		@media (min-width: 767px)  { @content; }
+	}
+	@else if $point == tiny {
+		@media (min-width: 200px)  { @content; }
+	}
+
+}
+
+// =========================================================================
+// States - @include state() { color: $white; }
+// =========================================================================
+
+@mixin state() {
+	&:hover,
+	&:active,
+	&:focus {
+		@content;
+	}
+}
+
+// =========================================================================
+// Transition - @include transition(all, 0.3s, linear);
+// =========================================================================
+
+@mixin transition($transition-property, $transition-time, $method) {
+	transition: $transition-property $transition-time $method;
+}
+
+@mixin no-transition($transition-time) {
+	transition: none;
+}
+
+// =========================================================================
+// Opacity - @include opacity(.8);
+// =========================================================================
+
+@mixin opacity($trans) {
+	zoom: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$trans * 100})";
+	opacity: $trans;
+}
+
+// =========================================================================
+// Box Sizing - @include box-sizing(border-box);
+// =========================================================================
+
+@mixin box-sizing($box-model) {
+	box-sizing: $box-model;
+}

@@ -1,0 +1,69 @@
+// =========================================================================
+// Base - Defaults and Content
+// =========================================================================
+
+*, *:before, *:after {
+	@extend %box-sizing;
+}
+
+html {
+	overflow-x: hidden;
+    font-size: 62.5%;
+}
+
+body {
+	font-family: $baseFont;
+	line-height: 1.5;
+    font-weight: 400;
+	color: $color__primary;
+	background-color: $color__neutral;
+    @include breakpoint(tiny) {
+        font-size: 1.4em;
+    }
+    @include breakpoint(small) {
+        font-size: 2.4em;
+    }
+}
+
+html,
+body {
+    height: 100%;
+    min-height: 100%;
+}
+
+:focus {
+	outline: none;
+}
+
+::selection {
+	color: $color__neutral;
+	background: $color__primary;
+}
+
+::-moz-selection {
+	color: $color__neutral;
+	background: $color__primary;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+div.ie {
+    @include rem(margin, 1.5rem 0);
+    background-color: $color__primary;
+    color: $color__neutral;
+    text-align: center;
+    padding: 15px 0;
+    p {
+        a {
+            color: $color__neutral;
+            text-decoration: underline;
+            @include state() {
+                text-decoration: none;
+            }
+        }
+    }
+}

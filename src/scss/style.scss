@@ -1,0 +1,44 @@
+// =========================================================================
+// Base Style File following SMACSS process
+// =========================================================================
+
+// =========================================================================
+// Helpers - Project Dependable Helpers
+// =========================================================================
+
+@import "helpers/normalize";
+@import "helpers/functions";
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/placeholders";
+@import "helpers/helper";
+
+// =========================================================================
+// Base - Defaults and Content
+// =========================================================================
+
+@import "base/base";
+@import "base/typography";
+@import "base/theme";
+
+// =========================================================================
+// Layout - Sections of Page
+// =========================================================================
+
+@import "layout/layout";
+
+// =========================================================================
+// Modules - Reusable Modular Parts
+// =========================================================================
+
+@import "modules/accessibility";
+@import "modules/buttons";
+@import "modules/infscr";
+@import "modules/hero";
+@import "modules/square";
+
+// =========================================================================
+// Important - Cascade Dependant Code
+// =========================================================================
+
+@import "important/print";

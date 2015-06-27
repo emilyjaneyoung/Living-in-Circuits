@@ -1,0 +1,105 @@
+// =========================================================================
+// Modules - Reusable Modular Parts
+// =========================================================================
+
+// =========================================================================
+// Hero Area
+// =========================================================================
+
+.hero {
+
+    position: relative;
+    @include breakpoint(tiny) {
+        text-align: left;
+        @include rem(padding, 1rem);
+    }
+    @include breakpoint(small) {
+        text-align: center;
+        @include rem(padding, 4rem 0);
+    }
+    @include breakpoint(standard) {
+        @include rem(padding, 5rem 0 2rem 0);
+    }
+
+    &__pos {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        color: $color__primary;
+        text-decoration: none;
+        @include state() {
+            color: $color__tertiary;
+        }
+        @include breakpoint(tiny) {
+            position: static;
+            display: block;
+        }
+        @include breakpoint(standard) {
+            position: static;
+        }
+        @include breakpoint(big) {
+            @include rem(top, 3rem);
+        }
+        @include breakpoint(large) {
+            @include rem(top, 2rem);
+        }
+    }
+
+    &__text {
+        display: block;
+        line-height: 1.3;
+        letter-spacing: 0.1em;
+        font-family: $baseTitle;
+        text-transform: uppercase;
+        font-weight: 600;
+        @include breakpoint(tiny) {
+            @include rem(font-size, 2rem);
+            @include rem(margin, 0 0 .2rem 0);
+        }
+        @include breakpoint(small) {
+            @include rem(font-size, 3rem);
+        }
+        @include breakpoint(large) {
+            @include rem(font-size, 4rem);
+        }
+        @include breakpoint(big) {
+            @include rem(font-size, 5rem);
+        }
+        @include breakpoint(large) {
+            @include rem(font-size, 6rem);
+        }
+    }
+
+    &__desc {
+        display: block;
+        letter-spacing: 0.1em;
+        @include breakpoint(tiny) {
+            @include rem(font-size, 1.6rem);
+        }
+        @include breakpoint(small) {
+            @include rem(font-size, 1.8rem);
+        }
+    }
+
+    &__img {
+        display: block;
+        overflow: visible;
+        width: 100%;
+        @include breakpoint(tiny) {
+            @include rem(margin, 2rem 0);
+        }
+        @include breakpoint(small) {
+            margin: 0;
+        }
+    }
+
+}
+
+svg.hero__img:not(:root) {
+  overflow: visible;
+}
+
+.hero__img .path {
+    stroke-dasharray: 3000;
+}

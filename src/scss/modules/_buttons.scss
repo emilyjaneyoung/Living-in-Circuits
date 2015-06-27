@@ -1,0 +1,36 @@
+// =========================================================================
+// Modules - Reusable Modular Parts
+// =========================================================================
+
+// =========================================================================
+// Buttons and Icons
+// =========================================================================
+
+// ==================================
+// Standard Btn
+// ==================================
+
+.btn {
+	width: auto;
+	display: inline-block;
+	cursor: pointer;
+	letter-spacing: .15em;
+	margin: 0 auto;
+	padding: 1em;
+	outline: none;
+	text-decoration: none;
+	@include rem(font-size, 1.4rem);
+	line-height: 1em;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: $color__neutral;
+	background-color: $color__primary;
+	text-align: center;
+	border: 2px solid $color__neutral;
+    font-family: $baseFont;
+	@include transition(background-color, 0.2s, linear);
+	@include state() {
+        color: $color__neutral;
+        background-color: $color__secondary;
+	}
+}

@@ -1,0 +1,48 @@
+// =========================================================================
+// Layout - Sections of Page
+// =========================================================================
+
+// =========================================================================
+// Containers
+// =========================================================================
+
+.wrapper {
+    max-width: 1260px;
+    margin: 0 auto;
+    background-color: $color__neutral;
+    @include breakpoint(tiny) {
+        width: 100%;
+        padding: 3%;
+    }
+    @include breakpoint(standard) {
+        width: 90%;
+        padding: 3% 5%;
+    }
+    @include breakpoint(big) {
+        width: 85%;
+        padding: 4% 8%;
+    }
+    @include breakpoint(large) {
+        width: 80%;
+        padding: 4% 10%;
+    }
+}
+
+// =========================================================================
+// Footer
+// =========================================================================
+
+.site-footer {
+    @include rem(padding, 3rem 0);
+}
+
+    .site-footer__title {
+        margin: 0;
+        a {
+            color: $color__secondary;
+            text-decoration: none;
+            @include state() {
+                color: $color__tertiary;
+            }
+        }
+    }

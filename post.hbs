@@ -26,13 +26,10 @@
 
                 {{#if author}}
                 <h2 class="meta">
-                    by {{author.name}}
+                    by {{author.name}} <br>
+                    Published on: {{date format='DD MMM YYYY'}}
                 </h2>
                 {{/if}}
-
-                <h3 class="date">
-                    Published on: {{date format='DD MMM YYYY'}}
-                </h3>
 
                 {{#if tags}}
                 <h3 class="tags">

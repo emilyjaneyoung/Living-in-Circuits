@@ -53,8 +53,7 @@
         border-bottom: 1px solid $color__primary;
     }
 
-    & .meta {
-        margin: 0;
+    .meta {
         @include rem(margin, 3rem 0 0 0);
         @include rem(font-size, 1.8rem);
         letter-spacing: 2px;
@@ -62,22 +61,14 @@
         font-family: $baseFont;
     }
 
-    & .date {
-        @include rem(margin, 0 0 2rem 0);
-        @include rem(font-size, 1.8rem);
-        letter-spacing: 2px;
-        text-transform: none;
-        font-family: $baseFont;
-    }
-
-    & .tags {
-        @include rem(margin, 0 0 2rem 0);
+    .tags {
+        @include rem(margin, 2rem 0 2rem 0);
         @include rem(font-size, 2.2rem);
         text-transform: none;
         font-family: $baseFont;
     }
 
-    & .reading-time {
+    .reading-time {
         @include rem(margin, 0 0 2rem 0);
         @include rem(font-size, 1.6rem);
     }

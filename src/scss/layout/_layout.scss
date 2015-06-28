@@ -12,7 +12,7 @@
     background-color: $color__neutral;
     @include breakpoint(tiny) {
         width: 100%;
-        padding: 3%;
+        padding: 5% 3%;
     }
     @include breakpoint(standard) {
         width: 90%;
@@ -33,7 +33,7 @@
 // =========================================================================
 
 .site-footer {
-    @include rem(padding, 3rem 0);
+    @include rem(padding, 3rem);
     a {
         color: $color__secondary;
         text-decoration: none;

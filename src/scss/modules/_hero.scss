@@ -28,6 +28,7 @@
         margin: 0 auto;
         color: $color__primary;
         text-decoration: none;
+        @include transition(all, 0.125s, linear);
         @include state() {
             color: $color__tertiary;
         }
@@ -92,6 +93,16 @@
         }
     }
 
+}
+
+.post-template .hero {
+
+    &__pos {
+        color: $color__neutral;
+        @include state() {
+            color: $color__secondary;
+        }
+    }
 }
 
 svg.hero__img:not(:root) {

@@ -133,9 +133,10 @@
 // Generic
 // ==================================
 
-.main-content hr {
+.main-content hr,
+.seperated {
     width: 100%;
-    @include rem(height, .1rem);
+    @include rem(height, .3rem);
     @include rem(margin, 2rem 0);
     display: block;
     @extend %clearfix;

@@ -1,0 +1,29 @@
+// =========================================================================
+// Modules - Reusable Modular Parts
+// =========================================================================
+
+// =========================================================================
+// Social Links
+// =========================================================================
+
+.social {
+	@include rem(padding-bottom, 2rem);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    @include rem(font-size, 1.6rem);
+    &__item {
+        display: inline;
+        @include rem(padding, 0 0 0 .5rem);
+        &:after {
+            content: 'x';
+            display: inline-block;
+            @include rem(padding,  0 .5rem 0 2rem);
+            color: $color__tertiary;
+        }
+        &:last-child {
+            &:after {
+                content: '';
+            }
+        }
+    }
+}

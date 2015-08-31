@@ -135,9 +135,12 @@
 
 .main-content hr,
 .seperated {
-    width: 100%;
+    width: 50%;
     @include rem(height, .3rem);
-    @include rem(margin, 2rem 0);
+    @include rem(margin-top, 2rem);
+    @include rem(margin-bottom, 2rem);
+    margin-left: auto;
+    margin-right: auto;
     display: block;
     @extend %clearfix;
     clear: both;
@@ -155,5 +158,5 @@
 }
 
 .main-content iframe {
-    width: 100%;
+    margin: 0 auto 30px auto !important;
 }

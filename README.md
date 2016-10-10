@@ -30,16 +30,6 @@ A personal blog theme for [Ghost](http://github.com/tryghost/ghost/) used on [my
 * For production, run 'gulp rel' This will turn on prefix and minification.
 * It is vital that only the gulp release version of the stylesheet is comiited to master.
 
-## .gitignore
-
-### Set up .gitignore with the following
-
-* npm-debug.log
-* .DS_Store
-* node_modules
-* .sass-cache
-* style.css (Depends on how the site is deployed, if you don't know ask!)
-
 ### EditorConfig
 
 EditorConfig helps developers maintain consistent coding styles between different editors
@@ -48,6 +38,3 @@ Install `EditorConfig` with [Package Control](https://sublime.wbond.net) and res
 ##Credits
 
 Many thanks to all who have made [www.ghost.org](http://www.ghost.org "Ghost") possible.
-
-## License
-Living In Circuits Ghost Theme is licensed under the MIT license. (http://opensource.org/licenses/MIT)

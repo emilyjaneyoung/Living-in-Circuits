@@ -11,28 +11,35 @@
 // ===================================
 
 .title-text {
+
     display: block;
-    @include rem(margin, 0 0 3rem 0);
-    @include rem(font-size, 3.2rem);
+    @include x-rem(margin, 0 0 30px 0);
+    @include x-rem(font-size, 32px);
     line-height: 1.1;
+
     &:after {
-        content: '';
+        content: "";
         width: 30%;
         display: block;
         margin: 0 auto;
-        @include rem(padding-top, 1rem);
+        @include x-rem(padding-top, 10px);
         border-bottom: 6px solid $color__secondary;
-        @include transition(all, 0.225s, linear);
+        @include transition(all, .225s, linear);
     }
+
     @include state() {
+
         &:after {
-            content: '';
+            content: "";
             width: 45%;
         }
+
     }
-    @include breakpoint(small) {
-        @include rem(font-size, 3.5rem);
+
+    @include breakpoint(767) {
+        @include x-rem(font-size, 35px);
     }
+
 }
 
 // ===================================
@@ -46,7 +53,7 @@
         padding: 1.154em;
         text-align: center;
         line-height: 1.5em;
-        margin: 1.038em 0px;
+        margin: 1.038em ;
         font-weight: 400;
         font-style: normal;
         border-top: 1px solid $color__primary;
@@ -54,23 +61,23 @@
     }
 
     .meta {
-        @include rem(margin, 3rem 0 0 0);
-        @include rem(font-size, 1.8rem);
+        @include x-rem(margin, 30px 0 0 0);
+        @include x-rem(font-size, 18px);
         letter-spacing: 2px;
         text-transform: none;
         font-family: $baseFont;
     }
 
     .tags {
-        @include rem(margin, 2rem 0 2rem 0);
-        @include rem(font-size, 2.2rem);
+        @include x-rem(margin, 20px 0 20px 0);
+        @include x-rem(font-size, 16px);
         text-transform: none;
         font-family: $baseFont;
     }
 
     .reading-time {
-        @include rem(margin, 0 0 2rem 0);
-        @include rem(font-size, 1.6rem);
+        @include x-rem(margin, 0 0 20px 0);
+        @include x-rem(font-size, 16px);
     }
 
 }
@@ -79,8 +86,45 @@
 // Typography
 // ===================================
 
-.main-content h1 { @include rem(font-size, 3.2rem); @include breakpoint(tiny) { @include rem(font-size, 2.4rem); } }
-.main-content h2 { @include rem(font-size, 2.4rem); @include breakpoint(tiny) { @include rem(font-size, 2rem); } }
+.main-content h1 {
+
+    @include x-rem(font-size, 32px);
+
+    @include breakpoint(320) {
+        @include x-rem(font-size, 24px);
+    }
+
+}
+
+.main-content h2 {
+
+    @include x-rem(font-size, 24px);
+
+    @include breakpoint(320) {
+        @include x-rem(font-size, 20px);
+    }
+
+}
+
+.main-content h3 {
+
+    @include x-rem(font-size, 21px);
+
+    @include breakpoint(320) {
+        @include x-rem(font-size, 18px);
+    }
+
+}
+
+.main-content h4 {
+
+    @include x-rem(font-size, 18px);
+
+    @include breakpoint(320) {
+        @include x-rem(font-size, 16px);
+    }
+
+}
 
 .main-content h1,
 .main-content h2,
@@ -88,44 +132,55 @@
 .main-content h4,
 .main-content h5,
 .main-content h6 {
-    @include rem(margin, 0 0 1rem 0);
+
+    @include x-rem(margin, 30px 0 10px 0);
     color: $color__primary;
     line-height: 1.2;
     letter-spacing: 0.1em;
     font-family: $baseTitle;
     text-transform: uppercase;
+
     a {
         color: inherit;
     }
+
 }
 
 .main-content ul {
-    @include rem(margin, 0 0 3rem 3rem);
+
+    @include x-rem(margin, 0 0 30px 30px);
+
     ul {
-        @include rem(margin, 0 0 0 3rem);
-        @include rem(padding, 0 0 0 1rem);
+        @include x-rem(margin, 0 0 0 30px);
+        @include x-rem(padding, 0 0 0 10px);
     }
+
     list-style-type: disc;
+
 }
 
 .main-content ol {
-    @include rem(margin, 0 0 3rem 3rem);
+
+    @include x-rem(margin, 0 0 30px 30px);
+
     ol {
-        @include rem(margin, 0 0 0 3rem);
-        @include rem(padding, 0 0 0 1rem);
+        @include x-rem(margin, 0 0 0 30px);
+        @include x-rem(padding, 0 0 0 10px);
     }
+
     li {
         list-style-type: decimal;
     }
+
 }
 
 .main-content p {
-    @include rem(margin, 0 0 3rem 0);
+    @include x-rem(margin, 0 0 10px 0);
 }
 
 .main-content blockquote {
-    @include rem(margin, 3rem 0);
-    @include rem(padding, 0 0 0 3rem);
+    @include x-rem(margin, 30px 0);
+    @include x-rem(padding, 0 0 0 30px);
     border-left: 7px solid $color__primary;
 }
 
@@ -136,25 +191,28 @@
 .main-content hr,
 .seperated {
     width: 50%;
-    @include rem(height, .3rem);
-    @include rem(margin-top, 2rem);
-    @include rem(margin-bottom, 2rem);
+    @include x-rem(height, 3px);
+    @include x-rem(margin-top, 20px);
+    @include x-rem(margin-bottom, 20px);
     margin-left: auto;
     margin-right: auto;
     display: block;
-    @extend %clearfix;
+    @include clearfix();
     clear: both;
     border: 0;
     background-color: $color__tertiary;
 }
 
 .main-content a {
+
     color: $color__secondary;
     text-decoration: none;
-    @include transition(all, 0.125s, linear);
+    @include transition(all, .125s, linear);
+
     @include state() {
         color: $color__tertiary;
     }
+
 }
 
 .main-content iframe {

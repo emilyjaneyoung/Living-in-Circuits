@@ -8,36 +8,34 @@
 
 .social {
 
-	@include rem(padding-bottom, 2rem);
+    @include x-rem(padding-bottom, 20px);
     text-transform: uppercase;
     letter-spacing: 4px;
-    @include rem(font-size, 1.6rem);
+    @include x-rem(font-size, 16px);
 
     &__item {
 
-        @include breakpoint(tiny) {
+        @include breakpoint(320) {
             display: block;
         }
 
-        @include breakpoint(small) {
+        @include breakpoint(767) {
+
             display: inline;
-            @include rem(padding, 0 0 0 .5rem);
+            @include x-rem(padding, 0 0 0 5px);
+
             &:after {
-                content: 'x';
+                content: "x";
                 display: inline-block;
-                @include rem(padding,  0 .5rem 0 2rem);
+                @include x-rem(padding,  0 5px 0 20px);
                 color: $color__tertiary;
             }
 
             &:last-child {
                 &:after {
-                    content: '';
+                    content: "";
                 }
             }
-
-        }
-
-        @include breakpoint(standard) {
 
         }
 

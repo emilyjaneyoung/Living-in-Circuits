@@ -1,5 +1,5 @@
 // =========================================================================
-// Typography - Resets and Placeholders
+// Typography - Resets
 // =========================================================================
 
 p {
@@ -13,4 +13,38 @@ h4,
 h5,
 h6 {
     margin: 0;
+    font-weight: 400;
+}
+
+address {
+    font-style: normal;
+}
+
+ul,
+ol {
+    @include list();
+}
+
+.heading-main {
+
+}
+
+.heading-sub {
+
+}
+
+.heading-page {
+
+}
+
+.heading-banner {
+
+}
+
+.heading-section {
+
+}
+
+.heading-side {
+
 }

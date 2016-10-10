@@ -7,24 +7,28 @@
 // =========================================================================
 
 .infscr-loading {
+
     position: fixed;
-    @include rem(right, 2rem);
-    @include rem(bottom, 4rem);
-    @include rem(width, 30rem);
+    @include x-rem(right, 20px);
+    @include x-rem(bottom, 40px);
+    @include x-rem(width, 300px);
     height: auto;
-    @include rem(padding, 1rem);
-    @include rem(font-size, 1.4rem);
+    @include x-rem(padding, 10px);
+    @include x-rem(font-size, 1.4px);
     background-color: $color__neutral--gray;
     z-index: 100000;
     animation-duration: 1s;
     animation-fill-mode: both;
     animation-name: bounceInUp;
+
     img {
         position: absolute;
     }
+
 }
 
 @keyframes bounceInUp {
+
     0% {
         opacity: 0;
         transform: translateY(2000px);
@@ -42,4 +46,5 @@
     100% {
         transform: translateY(0);
     }
+
 }

@@ -2,27 +2,10 @@
 // Base - Defaults and Content
 // =========================================================================
 
-*, *:before, *:after {
-	@extend %box-sizing;
-}
-
-html {
-	overflow-x: hidden;
-    font-size: 62.5%;
-}
-
-body {
-	font-family: $baseFont;
-	line-height: 1.5;
-    font-weight: 400;
-	color: $color__primary;
-	background-color: $color__neutral;
-    @include breakpoint(tiny) {
-        font-size: 1.4em;
-    }
-    @include breakpoint(small) {
-        font-size: 2.4em;
-    }
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
 html,
@@ -31,39 +14,87 @@ body {
     min-height: 100%;
 }
 
+html {
+    overflow-y: scroll;
+    overflow-x: hidden; // Use when using content off screen
+    min-height: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1em;
+    line-height: 1.5;
+    font-family: $baseFont;
+    font-weight: 300;
+    color: $color__primary;
+    background-color: $color__neutral;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    @include transition(all, .2s, linear);
+    @include breakpoint(767) {
+        @include no-transition(0);
+    }
+}
+
+a:visited {
+
+}
+
+a:hover {
+    outline: none;
+}
+
+a:active {
+    outline: none;
+}
+
+a[href^=tel] {
+    text-decoration: inherit;
+    color: inherit;
+}
+
 :focus {
-	outline: none;
+    outline: none;
 }
 
 ::selection {
-	color: $color__neutral;
-	background: $color__primary;
+    color: $color__neutral;
+    background: $color__primary;
 }
 
 ::-moz-selection {
-	color: $color__neutral;
-	background: $color__primary;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    color: $color__neutral;
+    background: $color__primary;
 }
 
 div.ie {
-    @include rem(margin, 1.5rem 0);
+    @include x-rem(margin, 15px 0);
     background-color: $color__primary;
     color: $color__neutral;
     text-align: center;
     padding: 15px 0;
+
     p {
+
         a {
+
             color: $color__neutral;
             text-decoration: underline;
+
             @include state() {
                 text-decoration: none;
             }
+
         }
+
     }
+
 }

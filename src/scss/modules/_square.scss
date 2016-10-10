@@ -14,53 +14,76 @@
 }
 
 .post-template .square {
-    @include breakpoint(tiny) {
-        flex-wrap: wrap;
-        display: flex;
-    }
-    @include breakpoint(small) {
+
+    @include breakpoint(767) {
         flex-wrap: nowrap;
         flex-direction: row;
     }
+
+    @include breakpoint(320) {
+        flex-wrap: wrap;
+        display: flex;
+    }
+
 }
 
-    .square__item {
-        position: relative;
-        border: 7px solid $color__primary;
-        overflow: hidden;
-        transition: color 0.3s;
-        @include state() {
-            border: 7px solid $color__secondary;
-            .title-text:after {
-                content: '';
-                width: 45%;
-            }
+.square__item {
+    position: relative;
+    border: 7px solid $color__primary;
+    overflow: hidden;
+    transition: color 0.3s;
+
+    @include state() {
+
+        border: 7px solid $color__secondary;
+
+        .title-text:after {
+            content: "";
+            width: 45%;
         }
-        @include breakpoint(tiny) {
-            width: 98%;
-            margin: 1%;
-            @include rem(margin-top, 1rem);
-            @include rem(margin-bottom, 1rem);
-            @include rem(padding, 3rem);
-            @include rem(font-size, 1.8rem);
-        }
-        @include breakpoint(small) {
-            width: 48%;
-            @include rem(padding, 2rem);
-            @include rem(font-size, 1.6rem);
-        }
-        @include breakpoint(standard) {
-            width: 24%;
-            margin: .5%;
-            @include rem(margin-top, 1rem);
-            @include rem(margin-bottom, 1rem);
-            @include rem(font-size, 1.8rem);
-        }
+
     }
 
-    .post-template .square__item {
-        @include breakpoint(tiny) {
-            width: auto;
-            width: 100%;
-        }
+    @include breakpoint(767) {
+        width: 48%;
+        @include x-rem(padding, 20px);
+        @include x-rem(font-size, 16px);
     }
+
+    @include breakpoint(320) {
+        width: 98%;
+        margin: 1%;
+        @include x-rem(margin-top, 10px);
+        @include x-rem(margin-bottom, 10px);
+        @include x-rem(padding, 30px);
+        @include x-rem(font-size, 18px);
+    }
+
+    @include breakpoint(768) {
+        width: 48%;
+        margin: .5%;
+        @include x-rem(margin-top, 10px);
+        @include x-rem(margin-bottom, 10px);
+        @include x-rem(font-size, 18px);
+    }
+
+    @include breakpoint(1024) {
+        width: 24%;
+        margin: .5%;
+        @include x-rem(margin-top, 10px);
+        @include x-rem(margin-bottom, 10px);
+        @include x-rem(font-size, 18px);
+    }
+
+}
+
+.post-template .square__item {
+
+    @include breakpoint(1024) {
+        width: 48%;
+        @include x-rem(margin-top, 10px);
+        @include x-rem(margin-bottom, 10px);
+        @include x-rem(font-size, 18px);
+    }
+
+}

@@ -9,88 +9,119 @@
 .hero {
 
     position: relative;
-    @include breakpoint(tiny) {
-        text-align: left;
-        @include rem(padding, 1rem);
-    }
-    @include breakpoint(small) {
+
+    @include breakpoint(767) {
         text-align: center;
-        @include rem(padding, 4rem 0);
+        @include x-rem(padding, 40px 0);
     }
-    @include breakpoint(standard) {
-        @include rem(padding, 5rem 0 2rem 0);
+
+    @include breakpoint(320) {
+        text-align: left;
+        @include x-rem(padding, 10px);
+    }
+
+    @include breakpoint(768) {
+        @include x-rem(padding, 50px 0 20px 0);
     }
 
     &__pos {
+
         position: absolute;
         left: 0;
         right: 0;
         margin: 0 auto;
         color: $color__primary;
         text-decoration: none;
-        @include transition(all, 0.125s, linear);
+        @include transition(all, .125s, linear);
+
         @include state() {
             color: $color__tertiary;
         }
-        @include breakpoint(tiny) {
+
+        @include breakpoint(320) {
             position: static;
             display: block;
         }
-        @include breakpoint(standard) {
+
+        @include breakpoint(768) {
             position: static;
         }
-        @include breakpoint(big) {
-            @include rem(top, 3rem);
+
+        @include breakpoint(1500) {
+            @include x-rem(top, 30px);
         }
-        @include breakpoint(large) {
-            @include rem(top, 2rem);
+
+        @include breakpoint(1024) {
+            @include x-rem(top, 20px);
         }
+
     }
 
     &__text {
+
         display: block;
         line-height: 1.3;
         letter-spacing: 0.1em;
         font-family: $baseTitle;
         text-transform: uppercase;
         font-weight: 600;
-        @include breakpoint(tiny) {
-            @include rem(font-size, 2rem);
-            @include rem(margin, 0 0 .2rem 0);
+
+        @include breakpoint(767) {
+            @include x-rem(font-size, 30px);
         }
-        @include breakpoint(small) {
-            @include rem(font-size, 3rem);
+
+        @include breakpoint(320) {
+            @include x-rem(font-size, 20px);
+            @include x-rem(margin, 0 0 2px 0);
         }
-        @include breakpoint(large) {
-            @include rem(font-size, 4rem);
+
+        @include breakpoint(768) {
+            @include x-rem(font-size, 40px);
+            text-align: center;
         }
-        @include breakpoint(big) {
-            @include rem(font-size, 5rem);
+
+        @include breakpoint(1500) {
+            @include x-rem(font-size, 50px);
         }
-        @include breakpoint(large) {
-            @include rem(font-size, 6rem);
+
+        @include breakpoint(1024) {
+            @include x-rem(font-size, 60px);
         }
+
     }
 
     &__desc {
+
         display: block;
         letter-spacing: 0.1em;
-        @include breakpoint(tiny) {
-            @include rem(font-size, 1.6rem);
+
+        @include breakpoint(767) {
+            @include x-rem(font-size, 18px);
         }
-        @include breakpoint(small) {
-            @include rem(font-size, 1.8rem);
+
+        @include breakpoint(768) {
+            @include x-rem(font-size, 18px);
+            text-align: center;
         }
+
+        @include breakpoint(320) {
+            @include x-rem(font-size, 16px);
+        }
+
     }
 
     &__img {
+
         width: 100%;
-        @include breakpoint(tiny) {
-            @include rem(margin, 2rem 0 1rem 0);
-        }
-        @include breakpoint(small) {
+
+        @include breakpoint(767) {
             margin: 0;
         }
+
+        @include breakpoint(320) {
+            @include x-rem(margin, 20px 0 10px 0);
+        }
+
     }
 
 }
@@ -99,14 +130,16 @@
 
     &__pos {
         color: $color__neutral;
+
         @include state() {
             color: $color__secondary;
         }
+
     }
 }
 
 svg.hero__img:not(:root) {
-  overflow: visible;
+    overflow: visible;
 }
 
 .hero__img .path {

@@ -7,11 +7,11 @@
 // =========================================================================
 
 .central {
-	text-align: center;
+    text-align: center;
 }
 
 .coloured {
-	background-color: $color__primary;
+    background-color: $color__primary;
 }
 
 .reverse {
@@ -27,25 +27,25 @@
 // =========================================================================
 
 .spacer {
-    @include breakpoint(tiny) {
-        @include rem(margin-bottom, 1rem);
+    @include breakpoint(320) {
+        @include x-rem(margin-bottom, 10px);
     }
-    @include breakpoint(standard) {
-        @include rem(margin-bottom, 3rem);
+    @include breakpoint(768) {
+        @include x-rem(margin-bottom, 30px);
     }
-    @include breakpoint(large) {
-        @include rem(margin-bottom, 6rem);
+    @include breakpoint(1024) {
+        @include x-rem(margin-bottom, 60px);
     }
 }
 
-.spacer--small {
-    @include breakpoint(tiny) {
-        @include rem(margin-bottom, .5rem);
+.spacer--767 {
+    @include breakpoint(320) {
+        @include x-rem(margin-bottom, 5px);
     }
-    @include breakpoint(standard) {
-        @include rem(margin-bottom, 1.5rem);
+    @include breakpoint(768) {
+        @include x-rem(margin-bottom, 15px);
     }
-    @include breakpoint(large) {
-        @include rem(margin-bottom, 3rem);
+    @include breakpoint(1024) {
+        @include x-rem(margin-bottom, 30px);
     }
 }

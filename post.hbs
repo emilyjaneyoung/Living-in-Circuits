@@ -5,7 +5,7 @@
 <main role="main" id="main-content" class="coloured">
 
     <div class="hero spacer">
-		<a href="/" title="Journal of Emily Young, Front-End Developer" class="hero__pos">
+		<a href="/" class="hero__pos">
 			<span class="hero__text">
                 {{@blog.title}}
             </span>
@@ -25,16 +25,16 @@
                 </h1>
 
                 {{#if author}}
-                <h2 class="meta">
+                <p class="meta">
                     by {{author.name}} <br>
                     Published on: {{date format='DD MMM YYYY'}}
-                </h2>
+                </p>
                 {{/if}}
 
                 {{#if tags}}
-                <h3 class="tags">
+                <p class="tags">
                     {{tags prefix=" Filed in: "}}
-                </h3>
+                </p>
                 {{/if}}
 
                 <p class="reading-time">
@@ -50,27 +50,27 @@
 
         <footer class="main-content">
 
-            <h4 class="visually-hidden">Continue Reading</h4>
+            <h1 class="visually-hidden">Continue Reading</h1>
 
             <div class="square">
 
                 {{#prev_post}}
                 <section class="main-content content square__item central">
 
-                    <h1 class="central title-text">
+                    <h2 class="central title-text">
                         <a href="{{url}}">
                             {{title}}
                         </a>
-                    </h1>
+                    </h2>
 
-                    <h3 class="date">
+                    <p class="date">
                         Published on: {{date format='DD MMM YYYY'}}
-                    </h3>
+                    </p>
 
                     {{#if tags}}
-                    <h3 class="tags">
+                    <p class="tags">
                         {{tags prefix=" Filed in: "}}
-                    </h3>
+                    </p>
                     {{/if}}
 
                     <p class="post__content">
@@ -83,20 +83,20 @@
                 {{#next_post}}
                 <section class="main-content content square__item central">
 
-                    <h1 class="central title-text">
+                    <h2 class="central title-text">
                         <a href="{{url}}">
                             {{title}}
                         </a>
-                    </h1>
+                    </h2>
 
-                    <h3 class="date">
+                    <p class="date">
                         Published on: {{date format='DD MMM YYYY'}}
-                    </h3>
+                    </p>
 
                     {{#if tags}}
-                    <h3 class="tags">
+                    <p class="tags">
                         {{tags prefix=" Filed in: "}}
-                    </h3>
+                    </p>
                     {{/if}}
 
                     <p class="post__content">

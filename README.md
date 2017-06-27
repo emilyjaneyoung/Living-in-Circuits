@@ -1,6 +1,8 @@
-# Living in Circuits
+# Ghost Theme
 
-A personal blog theme for [Ghost](http://github.com/tryghost/ghost/) used on [my blog](http://emily.ghost.io/)
+A personal blog theme for [Ghost](http://github.com/tryghost/ghost/)
+
+This is no longer in use
 
 ## Prerequisites
 
